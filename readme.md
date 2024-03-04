@@ -1,17 +1,17 @@
-#Video-Based Motion Extraction and Amplification
+# Video-Based Motion Extraction and Amplification
 
 
-##Problem Statement:
+## Problem Statement:
 
 Develop a system to extract and enhance otherwise invisible motion from a video, or a
 live video feed.
 
-##Motivation:
+## Motivation:
 
 To be comfortable with theoretical concepts of image processing through their pragmatic
 usage in real-world applications.
 
-##Objectives:
+## Objectives:
 
     1) To reveal temporal variations in videos that are diffi-
     cult or impossible to see with the naked eye and display them in
@@ -23,7 +23,7 @@ usage in real-world applications.
     of blood as it fills the face and also to amplify and reveal small
     motions.
     
-##Applications in Real world:
+## Applications in Real world:
 
     1) To measure the pulse rate, or breathing rate, of people (or animals) using non
     intrusive methods, and without physical contact.
@@ -33,7 +33,7 @@ usage in real-world applications.
     in studying subtle changes in the night sky.
     4) To use as a video special effect for motion pictures, or social media.
 
-##IP Algorithm/Concept to be used:
+## IP Algorithm/Concept to be used:
 
     1) Eulerian Video Magnification:
     To amplify motion, this method does not perform feature
@@ -41,12 +41,12 @@ usage in real-world applications.
     spatio-temporal processing. This Eulerian-based method, which temporally processes
     pixels in a fixed spatial region, successfully reveals informative signals and amplifies
     small motions in real-world videos.
-##Choice of Programming Language(s):
+## Choice of Programming Language(s):
 
 1)Python
 2)Matlab
 
-##References:
+## References:
 
     1)Hao-Yu Wu, Michael Rubinstein, Eugene Shih, John Guttag, Frédo Durand, and
     William Freeman. 2012. Eulerian video magnification for revealing subtle changes in the
