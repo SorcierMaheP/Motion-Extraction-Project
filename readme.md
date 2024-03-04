@@ -53,6 +53,8 @@ small motions in real-world videos.
 William Freeman. 2012. Eulerian video magnification for revealing subtle changes in the
 world. ACM Trans. Graph. 31, 4, Article 65 (July 2012), 8 pages.
 https://doi.org/10.1145/2185520.2185561
+
 2)Motion Extraction Video by Posy( https://www.youtube.com/watch?v=NSS6yAMZF78 )
+
 3) Reveal Invisible Motion With This Clever Video Trick by Steve Mould
 (https://www.youtube.com/watch?v=rEoc0YoALt0 )
