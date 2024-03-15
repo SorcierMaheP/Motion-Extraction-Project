@@ -35,6 +35,15 @@ in studying subtle changes in the night sky.
 
 ## IP Algorithm/Concept to be used:
 
+
+0) Phase-Based Video Motion Processing:
+Phase variations of the coefficients of a complex-valued steerable
+pyramid over time correspond to motion, and can be temporally
+processed and amplified to reveal imperceptible motions, or atten-
+uated to remove distracting changes.In comparison to the pre-
+vious Eulerian Video Magnification method it supports larger am-
+plification factors and is significantly less sensitive to noise. 
+
 1) Eulerian Video Magnification:
 To amplify motion, this method does not perform feature
 tracking or optical flow computation, but merely magnifies temporal color changes using
@@ -43,18 +52,23 @@ pixels in a fixed spatial region, successfully reveals informative signals and a
 small motions in real-world videos.
 ## Choice of Programming Language(s):
 
-1)Python
+1) Python
 
-2)Matlab
+2) Matlab
 
 ## References:
 
-1)Hao-Yu Wu, Michael Rubinstein, Eugene Shih, John Guttag, Frédo Durand, and
+0) Phase-Based Video Motion Processing: 
+Neal Wadhwa, Michael Rubinstein, Fr´edo Durand, William T. Freeman  
+https://dl.acm.org/doi/10.1145/2461912.2461966
+    
+
+1) Hao-Yu Wu, Michael Rubinstein, Eugene Shih, John Guttag, Frédo Durand, and
 William Freeman. 2012. Eulerian video magnification for revealing subtle changes in the
 world. ACM Trans. Graph. 31, 4, Article 65 (July 2012), 8 pages.
 https://doi.org/10.1145/2185520.2185561
 
-2)Motion Extraction Video by Posy( https://www.youtube.com/watch?v=NSS6yAMZF78 )
+2) Motion Extraction Video by Posy( https://www.youtube.com/watch?v=NSS6yAMZF78 )
 
 3) Reveal Invisible Motion With This Clever Video Trick by Steve Mould
 (https://www.youtube.com/watch?v=rEoc0YoALt0 )
