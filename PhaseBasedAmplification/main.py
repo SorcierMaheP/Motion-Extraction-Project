@@ -48,16 +48,16 @@ DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 # ==========================================================================================
 # start main program
 
-if __name__ == '__main__':
+def main(colorsp):
 
     # Add parameters here:
-    videoPath = "./Temp/sample.mp4"
-    phaseMagnification = 15.0
-    freqLowerbound = 0.5
-    freqHigherBound = 2.5
+    videoPath = "./SampleVideos/crane_crop.avi"
+    phaseMagnification = 10.0
+    freqLowerbound = 0.2
+    freqHigherBound = 0.25
 
     # options:  "luma1", "luma3", "gray", "yiq", "rgb"
-    colorspace = "yiq"
+    colorspace = colorsp
     # options: "full_octave", "half_octave", "smooth_half_octave", "smooth_quarter_octave"
     pyramidType = "smooth_quarter_octave"
 
@@ -334,3 +334,9 @@ if __name__ == '__main__':
 
     print("Motion Magnification processing complete! \n")
     print(f"Time Elapsed (HH:MM:SS): {timeElapsed} \n")
+
+
+col = ["gray", "yiq", "rgb"]
+
+for colour in col:
+    main(colour)

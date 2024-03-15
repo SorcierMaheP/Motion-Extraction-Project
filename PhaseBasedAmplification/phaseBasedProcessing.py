@@ -163,12 +163,8 @@ class PhaseBased():
                 curr_pyr = curr_pyr * torch.exp(1.0j*modifed_phase)
 
                 # accumulate reconstruced levels
-                temp = recon_level_batch(curr_pyr, filter_batch)
-                print(temp.shape)
-                temp = temp.sum(dim=0)
-                print(temp.shape)
-                print(recon_dft[vid_idx, :, :].shape)
-                recon_dft[vid_idx, :, :] += temp
+                recon_dft[vid_idx, :,
+                          :] += recon_level_batch(curr_pyr, filter_batch).sum(dim=0)
 
         # add unchanged Low Pass Component for contrast
         # adding hipass seems to cause bad artifacts and leaving
