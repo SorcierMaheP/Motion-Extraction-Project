@@ -57,11 +57,12 @@ small motions in real-world videos.
 2) Matlab
 
 ## To Run
-Install the relevant version 2.2.1 of pytorch for your system from: https://pytorch.org/get-started/locally/
-Run :
-    pip install -r requirements.txt
+Install the relevant version of pytorch(2.2.1) for your system from: https://pytorch.org/get-started/locally/
 
-Run whichever script you so wish to desire 
+Run :
+   ``` pip install -r requirements.txt```
+
+Run whichever script you'd like to
 
 ## References:
 
