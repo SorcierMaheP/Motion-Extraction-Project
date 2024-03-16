@@ -76,9 +76,7 @@ class Thread(QThread):
                     (height, width, 3), (255, 0, 0), dtype=np.uint8
                 )
 
-                blend_frame = mask = cv.bitwise_and(
-                    solid_color_frame, solid_color_frame, mask=mask
-                )
+                mask = cv.bitwise_and(solid_color_frame, solid_color_frame, mask=mask)
                 blend_frame = cv.addWeighted(orig_frame, 0.4, mask, 0.6, 0)
 
                 # Creating and scaling QImage
