@@ -2,6 +2,7 @@ import os
 import sys
 import time
 import platform
+import numpy as np
 
 import cv2 as cv
 from PySide6.QtCore import Qt, QThread, Signal, Slot
@@ -67,30 +68,31 @@ class Thread(QThread):
                     frameList.clear()
 
                 proc_frame = cv.addWeighted(frame, 0.5, previousFrame, 0.5, 0)
-                blend_frame = cv.addWeighted(
-                    orig_frame,
-                    0.2,
-                    cv.cvtColor(proc_frame, cv.COLOR_GRAY2RGB),
-                    0.8,
-                    5.0,
+
+                _, mask = cv.threshold(proc_frame, 140, 255, cv.THRESH_BINARY)
+                height, width = mask.shape
+
+                solid_color_frame = np.full(
+                    (height, width, 3), (255, 0, 0), dtype=np.uint8
                 )
+
+                blend_frame = mask = cv.bitwise_and(
+                    solid_color_frame, solid_color_frame, mask=mask
+                )
+                blend_frame = cv.addWeighted(orig_frame, 0.4, mask, 0.6, 0)
 
                 # Creating and scaling QImage
                 h, w, ch = orig_frame.shape
-                img_orig = QImage(orig_frame.data, w, h,
-                                  w * ch, QImage.Format_BGR888)
+                img_orig = QImage(orig_frame.data, w, h, w * ch, QImage.Format_BGR888)
                 scaled_img_orig = img_orig.scaled(800, 600, Qt.KeepAspectRatio)
 
                 h, w = proc_frame.shape
-                img_proc = QImage(proc_frame.data, w, h, w,
-                                  QImage.Format_Grayscale8)
+                img_proc = QImage(proc_frame.data, w, h, w, QImage.Format_Grayscale8)
                 scaled_img_proc = img_proc.scaled(800, 600, Qt.KeepAspectRatio)
 
                 h, w, ch = blend_frame.shape
-                img_blend = QImage(blend_frame.data, w, h,
-                                   w * ch, QImage.Format_BGR888)
-                scaled_img_blend = img_blend.scaled(
-                    800, 600, Qt.KeepAspectRatio)
+                img_blend = QImage(blend_frame.data, w, h, w * ch, QImage.Format_BGR888)
+                scaled_img_blend = img_blend.scaled(800, 600, Qt.KeepAspectRatio)
 
                 # Emit signals
                 self.origFrame.emit(scaled_img_orig)
@@ -278,7 +280,7 @@ if __name__ == "__main__":
     if userPlatform == "Linux":
         cam = (0, cv.CAP_V4L2)
     elif userPlatform in ["Windows", "Darwin"]:
-        cam = (0, )
+        cam = (0,)
 
     app = QApplication()
     qdarktheme.setup_theme("auto")
