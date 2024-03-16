@@ -1,2 +1,4 @@
 myEnv
 __pycache__
+**/build/**
+**/dist/**
