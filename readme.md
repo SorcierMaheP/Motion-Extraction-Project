@@ -66,8 +66,6 @@ Run whichever script you'd like to
 
 ## To Build (Using PyInstaller)
 Ensure that the ```pyinstaller``` package is installed. It can be installed 
-1) via requirements.txt  
-OR
 2) via pip:
 ```pip install pyinstaller```
 
