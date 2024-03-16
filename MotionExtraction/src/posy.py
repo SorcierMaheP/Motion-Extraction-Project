@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
 
 # In[1]:
 
@@ -31,7 +29,7 @@ userPlatform = platform.system()
 if userPlatform == "Linux":
     cam = (0, cv.CAP_V4L2)
 elif userPlatform in ["Windows", "Darwin"]:
-    cam = 0
+    cam = (0, )
 
 
 # Posy method:

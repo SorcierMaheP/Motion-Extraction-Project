@@ -77,16 +77,20 @@ class Thread(QThread):
 
                 # Creating and scaling QImage
                 h, w, ch = orig_frame.shape
-                img_orig = QImage(orig_frame.data, w, h, w * ch, QImage.Format_BGR888)
+                img_orig = QImage(orig_frame.data, w, h,
+                                  w * ch, QImage.Format_BGR888)
                 scaled_img_orig = img_orig.scaled(800, 600, Qt.KeepAspectRatio)
 
                 h, w = proc_frame.shape
-                img_proc = QImage(proc_frame.data, w, h, w, QImage.Format_Grayscale8)
+                img_proc = QImage(proc_frame.data, w, h, w,
+                                  QImage.Format_Grayscale8)
                 scaled_img_proc = img_proc.scaled(800, 600, Qt.KeepAspectRatio)
 
                 h, w, ch = blend_frame.shape
-                img_blend = QImage(blend_frame.data, w, h, w * ch, QImage.Format_BGR888)
-                scaled_img_blend = img_blend.scaled(800, 600, Qt.KeepAspectRatio)
+                img_blend = QImage(blend_frame.data, w, h,
+                                   w * ch, QImage.Format_BGR888)
+                scaled_img_blend = img_blend.scaled(
+                    800, 600, Qt.KeepAspectRatio)
 
                 # Emit signals
                 self.origFrame.emit(scaled_img_orig)
@@ -274,7 +278,7 @@ if __name__ == "__main__":
     if userPlatform == "Linux":
         cam = (0, cv.CAP_V4L2)
     elif userPlatform in ["Windows", "Darwin"]:
-        cam = 0
+        cam = (0, )
 
     app = QApplication()
     qdarktheme.setup_theme("auto")
