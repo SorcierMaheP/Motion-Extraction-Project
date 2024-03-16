@@ -18,6 +18,7 @@ from PySide6.QtWidgets import (
     QSizePolicy,
     QVBoxLayout,
     QWidget,
+    QFileDialog,
 )
 import qdarktheme
 
@@ -175,6 +176,11 @@ class Window(QMainWindow):
         buttons_layout.addWidget(self.button1)
         buttons_layout.setContentsMargins(20, 5, 5, 20)
 
+        # Defining file picker button
+        self.file_picker_button = QPushButton("Open File")
+        self.file_picker_button.clicked.connect(self.open_file_dialog)
+        self.file_picker_button.setFixedSize(200, 40)
+
         # Vertical layout for label1 and its text label
         label1_layout = QVBoxLayout()
         label1_layout.setAlignment(Qt.AlignTop)
@@ -198,9 +204,11 @@ class Window(QMainWindow):
         labels_layout.addLayout(label1_layout)
         labels_layout.addLayout(label2_layout)
         labels_layout.addLayout(label3_layout)
+        labels_layout.setContentsMargins(0, 20, 0, 0)
 
         # Main layout
         layout = QVBoxLayout()
+        layout.addWidget(self.file_picker_button)
         layout.addLayout(labels_layout)
         layout.addLayout(buttons_layout, 0)
 
@@ -213,6 +221,22 @@ class Window(QMainWindow):
         self.button1.clicked.connect(self.toggle_thread)
         self.button2.clicked.connect(self.kill_thread)
         self.button2.setEnabled(False)
+
+    @Slot()
+    def open_file_dialog(self):
+        options = QFileDialog.Options()
+        fileName, _ = QFileDialog.getOpenFileName(
+            self,
+            "QFileDialog.getOpenFileName()",
+            "",
+            "All Files (*)",
+            options=options,
+        )
+        if fileName:
+            global cam
+            cam = (fileName,)
+            self.file_picker_button.setEnabled(False)
+            self.file_picker_button.setStyleSheet("color:grey")
 
     @Slot()
     def kill_thread(self):
