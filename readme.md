@@ -56,6 +56,13 @@ small motions in real-world videos.
 
 2) Matlab
 
+## To Run
+Install the relevant version 2.2.1 of pytorch for your system from: https://pytorch.org/get-started/locally/
+Run :
+    pip install -r requirements.txt
+
+Run whichever script you so wish to desire 
+
 ## References:
 
 0) Phase-Based Video Motion Processing: 
