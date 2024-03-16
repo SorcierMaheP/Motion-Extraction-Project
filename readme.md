@@ -64,6 +64,19 @@ Run :
 
 Run whichever script you'd like to
 
+## To Build (Using PyInstaller)
+Ensure that the ```pyinstaller``` package is installed. It can be installed 
+1) via requirements.txt  
+OR
+2) via pip:
+```pip install pyinstaller```
+
+Navigate to the top level of the src directory of your desired project. Execute the following command in the virtual environment:
+```pyinstaller --onefile src/app.py```  
+
+The executable will be built in the dist folder newly created.
+
+
 ## References:
 
 0) Phase-Based Video Motion Processing: 
