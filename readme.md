@@ -36,7 +36,7 @@ in studying subtle changes in the night sky.
 ## IP Algorithm/Concept to be used:
 
 
-0) Phase-Based Video Motion Processing:
+1) Phase-Based Video Motion Processing:
 Phase variations of the coefficients of a complex-valued steerable
 pyramid over time correspond to motion, and can be temporally
 processed and amplified to reveal imperceptible motions, or atten-
@@ -44,7 +44,7 @@ uated to remove distracting changes.In comparison to the pre-
 vious Eulerian Video Magnification method it supports larger am-
 plification factors and is significantly less sensitive to noise. 
 
-1) Eulerian Video Magnification:
+2) Eulerian Video Magnification:
 To amplify motion, this method does not perform feature
 tracking or optical flow computation, but merely magnifies temporal color changes using
 spatio-temporal processing. This Eulerian-based method, which temporally processes
@@ -62,11 +62,11 @@ Install the relevant version of pytorch(2.2.1) for your system from: https://pyt
 Run :
    ``` pip install -r requirements.txt```
 
-Run whichever script you'd like to
+The jupyter notebooks in the root of the tree are for demonstration purposes. Appropriate python code is available in each project's folder.
 
 ## To Build (Using PyInstaller)
-Ensure that the ```pyinstaller``` package is installed. It can be installed 
-2) via pip:
+Ensure that the ```pyinstaller``` package is installed. It can be installed  
+1) via pip:
 ```pip install pyinstaller```
 
 Navigate to the top level of the src directory of your desired project. Execute the following command in the virtual environment:
