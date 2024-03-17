@@ -13,8 +13,7 @@ usage in real-world applications.
 
 ## Objectives:
 
-1) To reveal temporal variations in videos that are diffi-
-cult or impossible to see with the naked eye and display them in
+1) To reveal temporal variations in videos that are difficult or impossible to see with the naked eye and display them in
 an indicative manner.
 2) Motion with low spatial amplitude, while
 hard or impossible for humans to see, can be magnified to reveal
