@@ -49,11 +49,9 @@ tracking or optical flow computation, but merely magnifies temporal color change
 spatio-temporal processing. This Eulerian-based method, which temporally processes
 pixels in a fixed spatial region, successfully reveals informative signals and amplifies
 small motions in real-world videos.
-## Choice of Programming Language(s):
+## Choice of Programming Language:
 
 1) Python
-
-2) Matlab
 
 ## To Run
 Install the relevant version of pytorch(2.2.1) for your system from: https://pytorch.org/get-started/locally/

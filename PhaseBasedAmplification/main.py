@@ -49,9 +49,9 @@ def main(colorsp):
 
     # Add parameters here:
     videoPath = "./SampleVideos/craneCrop.avi"
-    phaseMagnification = 15.0
-    freqLowerbound = 0.5
-    freqHigherBound = 2
+    phaseMagnification = 20.0
+    freqLowerbound = 0.2
+    freqHigherBound = 0.25
 
     # options:  "luma1", "luma3", "gray", "yiq", "rgb"
     colorspace = colorsp
