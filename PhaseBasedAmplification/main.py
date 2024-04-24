@@ -51,10 +51,10 @@ DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 def main(colorsp):
 
     # Add parameters here:
-    videoPath = "./SampleVideos/crane_crop.avi"
+    videoPath = "./SampleVideos/baby.avi"
     phaseMagnification = 10.0
-    freqLowerbound = 0.2
-    freqHigherBound = 0.25
+    freqLowerbound = 0.04
+    freqHigherBound = 0.5
 
     # options:  "luma1", "luma3", "gray", "yiq", "rgb"
     colorspace = colorsp
