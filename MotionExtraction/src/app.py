@@ -20,7 +20,8 @@ from PySide6.QtWidgets import (
     QWidget,
     QFileDialog,
 )
-import qdarktheme
+
+# import qdarktheme
 
 
 class Thread(QThread):
@@ -147,7 +148,7 @@ class Window(QMainWindow):
             "border-top-color: red; "  # Red
             "border-left-color: #CCCCCC; "  # Light grey
             "border-right-color: #666666; "  # Dark grey
-            "border-bottom-color: green;"  # Green
+            "border-bottom-color: green;"  # Greenf
         )
 
         # Add text label for label3
@@ -305,7 +306,7 @@ if __name__ == "__main__":
         cam = (0,)
 
     app = QApplication()
-    qdarktheme.setup_theme("auto")
+    # qdarktheme.setup_theme("auto")
     w = Window()
     w.show()
     sys.exit(app.exec())
