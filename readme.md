@@ -13,7 +13,7 @@ Run :
    ``` pip install -r requirements.txt```
 ## UI
 
-Some Big cats moving slightly, and their motion extracted, in contrast to the still background
+Some Big cats moving ever so slightly, and their motion extracted, in contrast to the still background
 ![Ui image](./Images/motionExtractionUI.png)
 
 ![Ui image](./Images/motionExtractionUI2.png)
