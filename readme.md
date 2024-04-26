@@ -6,6 +6,19 @@
 Develop a system to extract and enhance otherwise invisible motion from a video, or a
 live video feed.
 
+## To Run
+Install the relevant version of pytorch(2.2.1) for your system from: https://pytorch.org/get-started/locally/
+
+Run :
+   ``` pip install -r requirements.txt```
+## UI
+
+![Ui image](./Images/motionExtractionUI.png)
+
+![Ui image](./Images/motionExtractionUI2.png)
+
+
+
 ## Motivation:
 
 To be comfortable with theoretical concepts of image processing through their pragmatic
@@ -43,21 +56,10 @@ uated to remove distracting changes.In comparison to the pre-
 vious Eulerian Video Magnification method it supports larger am-
 plification factors and is significantly less sensitive to noise. 
 
-2) Eulerian Video Magnification:
-To amplify motion, this method does not perform feature
-tracking or optical flow computation, but merely magnifies temporal color changes using
-spatio-temporal processing. This Eulerian-based method, which temporally processes
-pixels in a fixed spatial region, successfully reveals informative signals and amplifies
-small motions in real-world videos.
 ## Choice of Programming Language:
 
 1) Python
 
-## To Run
-Install the relevant version of pytorch(2.2.1) for your system from: https://pytorch.org/get-started/locally/
-
-Run :
-   ``` pip install -r requirements.txt```
 
 The jupyter notebooks in the root of the tree are for demonstration purposes. Appropriate python code is available in each project's folder.
 
@@ -74,16 +76,10 @@ The executable will be built in the dist folder newly created.
 
 ## References:
 
-0) Phase-Based Video Motion Processing: 
+1) Phase-Based Video Motion Processing: 
 Neal Wadhwa, Michael Rubinstein, Fr´edo Durand, William T. Freeman  
 https://dl.acm.org/doi/10.1145/2461912.2461966
     
-
-1) Hao-Yu Wu, Michael Rubinstein, Eugene Shih, John Guttag, Frédo Durand, and
-William Freeman. 2012. Eulerian video magnification for revealing subtle changes in the
-world. ACM Trans. Graph. 31, 4, Article 65 (July 2012), 8 pages.
-https://doi.org/10.1145/2185520.2185561
-
 2) Motion Extraction Video by Posy( https://www.youtube.com/watch?v=NSS6yAMZF78 )
 
 3) Reveal Invisible Motion With This Clever Video Trick by Steve Mould
