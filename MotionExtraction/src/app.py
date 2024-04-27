@@ -21,7 +21,7 @@ from PySide6.QtWidgets import (
     QFileDialog,
 )
 
-# import qdarktheme
+import qdarktheme
 
 
 class Thread(QThread):
@@ -306,7 +306,7 @@ if __name__ == "__main__":
         cam = (0,)
 
     app = QApplication()
-    # qdarktheme.setup_theme("auto")
+    qdarktheme.setup_theme("dark")
     w = Window()
     w.show()
     sys.exit(app.exec())

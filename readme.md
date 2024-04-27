@@ -7,10 +7,13 @@ Develop a system to extract and enhance otherwise invisible motion from a video,
 live video feed.
 
 ## To Run
-Install the relevant version of pytorch(2.2.1) for your system from: https://pytorch.org/get-started/locally/
-
-Run :
+1) Create a python virtual environment and activate it via the activate scripts present in bin folder, depending on your shell.
+2) Install the relevant version of pytorch for your system from: https://pytorch.org/get-started/locally/
+3) Pull in dependencies and requirements by running:  
    ``` pip install -r requirements.txt```
+4) For MotionExtraction, navigate to src directory and run either app.py code for the GUI app or the posy.py code for a direct experience with the source code.
+5) For PhaseBasedAmplification, run the main.py code.
+
 ## UI
 
 Some Big cats moving ever so slightly, and their motion extracted, in contrast to the still background
@@ -62,7 +65,7 @@ plification factors and is significantly less sensitive to noise.
 1) Python
 
 
-The jupyter notebooks in the root of the tree are for demonstration purposes. Appropriate python code is available in each project's folder.
+The jupyter notebooks in the root of the tree are for demonstration purposes. Appropriate python code is available in each project's folder, as shown above.
 
 ## To Build (Using PyInstaller)
 Ensure that the ```pyinstaller``` package is installed. It can be installed  
