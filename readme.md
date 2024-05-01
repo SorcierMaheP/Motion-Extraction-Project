@@ -9,7 +9,7 @@ live video feed.
 ## To Run
 1) Create a python virtual environment and activate it via the activate scripts present in bin folder, depending on your shell.
 2) Install the relevant version of pytorch for your system from: https://pytorch.org/get-started/locally/
-3) Pull in dependencies and requirements by running:  
+3) Install dependencies and requirements by running:  
    ``` pip install -r requirements.txt```
 4) For MotionExtraction, navigate to src directory and run either app.py code for the GUI app or the posy.py code for a direct experience with the source code.
 5) For PhaseBasedAmplification, run the main.py code.
